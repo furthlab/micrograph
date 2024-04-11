@@ -44,3 +44,17 @@ The shortcode has the formula:
 
 Check our the source code for a minimal example using revealjs for the presentation: [example.qmd](example.qmd).
 
+```
+---
+title: "Micrograph Example"
+author: "John Doe"
+format: revealjs
+---
+
+## Micrograph result
+
+{{< micrograph ./resources/MAX_240329_PC3_Rab_Anti_FlagTag_647_E300_I300_Phallodin_594_E100_I500_DAPI_E300_I300_1_MMStack_Pos0.ome.jpg DAPI Phalloidin anti-FLAG width="255" >}}
+
+- **Primary antibody:** 1:1000 overnight
+- **Secondary antibody:** 1:1000 for 1h
+```
