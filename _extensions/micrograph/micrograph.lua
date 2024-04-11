@@ -1,16 +1,18 @@
 function micrograph(args, kwargs, meta)
     cmt = meta['show_comments']
         local src = args[1] or ''
-        local imgWidth = args[2] or '255' -- Default size is 255x255
-        local channelOne = args[3] or 'DAPI'
-        local channelTwo = args[4] or 'Phalloidin'
-        local channelThree = args[5] or 'Alexa647'
+        local channelOne = args[2] or 'DAPI'
+        local channelTwo = args[3] or 'Phalloidin'
+        local channelThree = args[4] or 'Alexa647'
+        local imgWidth = pandoc.utils.stringify(kwargs["width"]) or '255'
+        local imgHeight = pandoc.utils.stringify(kwargs["height"]) or '100%'
+
         local html = [[
             <div class='container-wrapper'>
                 <div class='canvas-container'>
                     <h6 style="color: blue">]] .. channelOne .. [[</h6>
-                    <canvas id='redCanvas' width=']] .. imgWidth .. [[' height=']] .. imgWidth .. [['></canvas>
-                    <div class='slider-container'>
+                    <canvas id='redCanvas' width=']] .. imgWidth .. [[' height=']] .. imgHeight .. [['></canvas>
+                    <div class='slider-container channelOne-sliders'>
                         <label for='redMax'>Max:</label>
                         <input type='range' id='redMax' min='0' max='255' value='255'>
                         <label for='redMin'>Min:</label>
@@ -23,8 +25,8 @@ function micrograph(args, kwargs, meta)
                 </div>
                 <div class='canvas-container'>
                     <h6 style="color: green">]] .. channelTwo .. [[</h6>
-                    <canvas id='greenCanvas' width=']] .. imgWidth .. [[' height=']] .. imgWidth .. [['></canvas>
-                    <div class='slider-container'>
+                    <canvas id='greenCanvas' width=']] .. imgWidth .. [[' height=']] .. imgHeight .. [['></canvas>
+                    <div class='slider-container channelTwo-sliders'>
                         <label for='greenMax'>Max:</label>
                         <input type='range' id='greenMax' min='0' max='255' value='255'>
                         <label for='greenMin'>Min:</label>
@@ -37,8 +39,8 @@ function micrograph(args, kwargs, meta)
                 </div>
                 <div class='canvas-container'>
                     <h6 style="color: red">]] .. channelThree .. [[</h6>
-                    <canvas id='blueCanvas' width=']] .. imgWidth .. [[' height=']] .. imgWidth .. [['></canvas>
-                    <div class='slider-container'>
+                    <canvas id='blueCanvas' width=']] .. imgWidth .. [[' height=']] .. imgHeight .. [['></canvas>
+                    <div class='slider-container channelThree-sliders'>
                         <label for='blueMax'>Max:</label>
                         <input type='range' id='blueMax' min='0' max='255' value='255'>
                         <label for='blueMin'>Min:</label>
@@ -51,7 +53,7 @@ function micrograph(args, kwargs, meta)
                 </div>
                 <div class='canvas-container' style='vertical-align: top;'>
                     <h6>Merge</h6>
-                    <canvas id='originalCanvas' width='200' height='200'></canvas>
+                    <canvas id='originalCanvas' width=']] .. imgWidth .. [[' height=']] .. imgHeight .. [['></canvas>
                 </div>
             </div>
 
@@ -67,8 +69,9 @@ function micrograph(args, kwargs, meta)
                 .canvas-container canvas {
                     max-width: 100%;
                     height: auto;
+                    border-radius: 10px;
                 }
-    
+
                 .slider-container {
                     display: block;
                     line-height: 0.5;
@@ -87,6 +90,10 @@ function micrograph(args, kwargs, meta)
                     margin-bottom: 5px; /* Adjust vertical spacing between input and label */
                 }
                 
+                /* Adjust the color of the slider thumb for green sliders */
+                .channelOne-sliders::-webkit-slider-thumb {
+                    background-color: blue; /* Change the color as desired */
+                }
                 
             </style>
             <script src="https://docs.opencv.org/master/opencv.js"></script>

@@ -4,7 +4,9 @@ author: "John Doe"
 format: revealjs
 ---
 
-## Microscope slide
+## Micrograph result
 
-{{< micrograph ./resources/MAX_240329_PC3_Rab_Anti_FlagTag_647_E300_I300_Phallodin_594_E100_I500_DAPI_E300_I300_1_MMStack_Pos0.ome.jpg 255 DAPI Phalloidin anti-FLAG >}}
+{{< micrograph ./resources/MAX_240329_PC3_Rab_Anti_FlagTag_647_E300_I300_Phallodin_594_E100_I500_DAPI_E300_I300_1_MMStack_Pos0.ome.jpg DAPI Phalloidin anti-FLAG width="255" >}}
 
+- **Primary antibody:** 1:1000 overnight
+- **Secondary antibody:** 1:1000 for 1h
