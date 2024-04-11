@@ -32,7 +32,7 @@ If you're using version control, you will want to check in this directory.
 {{< micrograph ./img/GFP.jpg DAPI Phalloidin GFP width="255" >}}
 ```
 
-![](https://github.com/micrograph/example.gif)
+![](https://github.com/furthlab/micrograph/blob/master/example.gif)
 
 
 ## Example
