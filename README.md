@@ -2,7 +2,15 @@
 
 Quarto shortcode extension to display micrographs in revealjs presentations
 
-## Installing
+## Installing quarto
+
+Go to this site to install Quarto CLI, VScode recommend as IDE:
+https://quarto.org/docs/get-started/
+
+Also recommend the VScode Quarto extension:
+https://quarto.org/docs/tools/vscode.html
+
+## Installing the extension for your project
 
 ```bash
 quarto add furthlab/micrograph
@@ -23,6 +31,9 @@ If you're using version control, you will want to check in this directory.
 ```
 {{< micrograph ./img/GFP.jpg DAPI Phalloidin GFP width="255" >}}
 ```
+
+![](https://github.com/micrograph/example.gif)
+
 
 ## Example
 

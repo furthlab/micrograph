@@ -10,3 +10,4 @@ format: revealjs
 
 - **Primary antibody:** 1:1000 overnight
 - **Secondary antibody:** 1:1000 for 1h
+
