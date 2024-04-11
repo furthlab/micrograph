@@ -21,7 +21,12 @@ If you're using version control, you will want to check in this directory.
 
 ## Using
 
-- First argument is path to file.
+The shortcode has the formula:
+```
+{{< micrograph >}}
+```
+
+- First argument is path to file (e.g. `./img/GFP.jpg`).
 - Second argument is name of the blue channel (default `DAPI`).
 - Third argument is name of the green channel (default `Phalloidin`).
 - Fourth argument is name of the red channel (default `anti-FLAG`).
@@ -32,7 +37,7 @@ If you're using version control, you will want to check in this directory.
 {{< micrograph ./img/GFP.jpg DAPI Phalloidin GFP width="255" >}}
 ```
 
-![](https://github.com/furthlab/micrograph/blob/master/example.gif)
+![](example.gif)
 
 
 ## Example
