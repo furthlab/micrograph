@@ -1,9 +1,10 @@
 ---
 title: "Micrograph Example"
+author: "John Doe"
+format: revealjs
 ---
 
-## Heading
+## Microscope slide
 
-{{< micrograph MAX_240329_PC3_Rab_Anti_FlagTag_647_E300_I300_Phallodin_594_E100_I500_DAPI_E300_I300_1_MMStack_Pos0.ome.jpg >}}
-
+{{< micrograph ./resources/MAX_240329_PC3_Rab_Anti_FlagTag_647_E300_I300_Phallodin_594_E100_I500_DAPI_E300_I300_1_MMStack_Pos0.ome.jpg 255 DAPI Phalloidin anti-FLAG >}}
 
