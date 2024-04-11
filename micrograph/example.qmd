@@ -1,0 +1,9 @@
+---
+title: "Micrograph Example"
+---
+
+## Heading
+
+{{< micrograph MAX_240329_PC3_Rab_Anti_FlagTag_647_E300_I300_Phallodin_594_E100_I500_DAPI_E300_I300_1_MMStack_Pos0.ome.jpg >}}
+
+
