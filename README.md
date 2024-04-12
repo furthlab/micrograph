@@ -8,6 +8,7 @@ Quarto shortcode extension to display micrographs in revealjs presentations
 
 In descending order of priority:
 
+- Add scalebar option.
 - Support for 16-bit raw tif. 
 - Panel to change LUT configuration instead of default RGB:
     - 🔵🟢🟣 blue, green, magenta `BGM`.
