@@ -8,6 +8,7 @@ Quarto shortcode extension to display micrographs in revealjs presentations
 
 In descending order of priority:
 
+- Some sort of PowerPoint export support, even if only linked to HTML or static image.
 - Add scalebar option.
 - Support for 16-bit raw tif. 
 - Panel to change LUT configuration instead of default RGB:
