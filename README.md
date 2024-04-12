@@ -2,6 +2,20 @@
 
 Quarto shortcode extension to display micrographs in revealjs presentations
 
+### Features not implemented but in wish list
+
+In descending order of priority.
+
+- Support for 16-bit raw tif. 
+- Panel to change LUT configuration instead of default RGB:
+    - 🔵🟢🟣 blue, green, magenta `BGM`.
+    - 🔵🩵🔴 blue, cyan, red `BCR`.
+    - 🔵🟡🔴 blue, yellow, red `BYR`.
+- Re-arrange channel order.
+- Hide control panels and make them appear on a click.
+- Change layout and size of individual panels.
+- Support for video files.
+
 ## Installing quarto
 
 Go to this site to install Quarto CLI, VScode recommend as IDE:
