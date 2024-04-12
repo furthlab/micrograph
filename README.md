@@ -2,9 +2,11 @@
 
 Quarto shortcode extension to display micrographs in revealjs presentations
 
-### Features not implemented but in wish list
+![](example.gif)
 
-In descending order of priority.
+### Features not implemented but on the wish list
+
+In descending order of priority:
 
 - Support for 16-bit raw tif. 
 - Panel to change LUT configuration instead of default RGB:
@@ -47,12 +49,11 @@ The shortcode has the formula:
 - Optional arguments are:
     - `width = "255"` default is 255px. 
 
+Full example:
+
 ```
 {{< micrograph ./img/GFP.jpg DAPI Phalloidin GFP width="255" >}}
 ```
-
-![](example.gif)
-
 
 ## Example
 
